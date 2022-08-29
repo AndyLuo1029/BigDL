@@ -46,21 +46,17 @@ For Building Fast, Scalable, and Secured AI
 
 ```mermaid
 flowchart TD;
-    Feature1[Develop AI from scratch?];
-    Feature1-- No, I want to improve -->Feature2[Single-node or Cluster?];
-    Feature1-- No, I want to protect -->ReferPPML([<em><strong>PPML</strong></em>]);
-    Feature1-- Yes --> Feature3[General or Domain-specific application?];
-    Feature2-- single node --->ReferNano([<em><strong>Nano</strong></em>]);
-    Feature2-- cluster -->Feature5[Which part to distribute?];
-    Feature5-- data processing -->ReferOrcaData([<em><strong>Orca:Data </strong></em>]);
-    Feature5-- training & inference -->ReferOrcaLearn([<em><strong>Orca:Learn </strong></em>]);
-    Feature5-- tuning -->ReferOrcaAutoml([<em><strong>Orca:AutoML </strong></em>]);
-    Feature3-- general -->ReferDLlib([<em><strong>DLlib</strong></em>]);
-    Feature3-- domain-specific -->Feature4[Which domain?];
-    Feature4-- time series -->ReferChronos([<em><strong>Chronos</strong></em>]);
-    Feature4-- recommendation system -->ReferFriesian([<em><strong>Friesian</strong></em>]);
-    Feature4-- others -->ReferContact([<em><strong>Contact Us &#x2709  </strong></em>]);
-
+    Feature1[Security?];
+    Feature1-- No -->Feature2[Python VS. Scala/Java];
+    Feature1-- Yes(HW Security & FL) -->ReferPPML([<em><strong>PPML</strong></em>]);
+    Feature2-- Python --->Feature3[Application Senario];
+    Feature2-- Scala/Java -->ReferDLlib([<em><strong>DLlib</strong></em>]);
+    Feature3-- Accelerated Tensorflow / PyTorch -->ReferNano([<em><strong>Nano</strong></em>]);
+    Feature3-- Distributed Big Data + AI (TF/PT) -->ReferOrca;
+    Feature3-- DL for Spark MLlib -->ReferDLlib([<em><strong>DLlib</strong></em>]);
+    Feature3-- High level App Framework -->Feature4[Domain?];
+    Feature4---->ReferChronos([<em><strong>Chronos</strong></em>]);
+    Feature4---->ReferFriesian([<em><strong>Friesian</strong></em>]);
     
     click ReferNano "https://bigdl.readthedocs.io/en/latest/doc/Nano/Overview/nano.html" "Refer to Nano" _parent
     click ReferOrcaData "https://bigdl.readthedocs.io/en/latest/doc/Orca/Overview/data-parallel-processing.html"
