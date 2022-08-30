@@ -47,23 +47,21 @@ For Building Fast, Scalable, and Secured AI
 ```mermaid
 flowchart TD;
     Feature1[Security?];
-    Feature1-- No -->Feature2[Python VS. Scala/Java];
-    Feature1-- Yes(HW Security & FL) -->ReferPPML([<em><strong>PPML</strong></em>]);
-    Feature2-- Python --->Feature3[Application Senario];
-    Feature2-- Scala/Java -->ReferDLlib([<em><strong>DLlib</strong></em>]);
-    Feature3-- Accelerated Tensorflow / PyTorch -->ReferNano([<em><strong>Nano</strong></em>]);
-    Feature3-- Distributed Big Data + AI (TF/PT) -->ReferOrca;
-    Feature3-- DL for Spark MLlib -->ReferDLlib([<em><strong>DLlib</strong></em>]);
+    Feature1-- No ---->Feature2[Python VS. Scala/Java];
+    Feature1-- Yes HW Security & FL  ------->ReferPPML([<em><strong>PPML</strong></em>]);
+    Feature2-- Python -->Feature3[Application Senario];
+    Feature2-- Scala/Java ---->ReferDLlib([<em><strong>DLlib</strong></em>]);
+    Feature3-- Accelerated Tensorflow / PyTorch --->ReferNano([<em><strong>Nano</strong></em>]);
+    Feature3-- Distributed Big Data + AI TF/PT --->ReferOrca([<em><strong>Orca</strong></em>]);
+    Feature3-- DL for Spark MLlib --->ReferDLlib2([<em><strong>DLlib</strong></em>]);
     Feature3-- High level App Framework -->Feature4[Domain?];
-    Feature4---->ReferChronos([<em><strong>Chronos</strong></em>]);
-    Feature4---->ReferFriesian([<em><strong>Friesian</strong></em>]);
+    Feature4-->ReferChronos([<em><strong>Chronos</strong></em>]);
+    Feature4-->ReferFriesian([<em><strong>Friesian</strong></em>]);
     
     click ReferNano "https://bigdl.readthedocs.io/en/latest/doc/Nano/Overview/nano.html" "Refer to Nano" _parent
-    click ReferOrcaData "https://bigdl.readthedocs.io/en/latest/doc/Orca/Overview/data-parallel-processing.html"
-    click ReferOrcaLearn "https://bigdl.readthedocs.io/en/latest/doc/Orca/Overview/distributed-training-inference.html"
-    click ReferOrcaAutoml "https://bigdl.readthedocs.io/en/latest/doc/Orca/Overview/distributed-tuning.html"
+    click ReferOrca "https://bigdl.readthedocs.io/en/latest/doc/Orca/Overview/orca.html"
     click ReferDLlib "https://bigdl.readthedocs.io/en/latest/doc/DLlib/Overview/dllib.html"
-    click ReferRayOnSpark "https://bigdl.readthedocs.io/en/latest/doc/Ray/Overview/ray.html"
+    click ReferDLlib2 "https://bigdl.readthedocs.io/en/latest/doc/DLlib/Overview/dllib.html"
     click ReferChronos "https://bigdl.readthedocs.io/en/latest/doc/Chronos/Overview/chronos.html"
     click ReferFriesian "https://bigdl.readthedocs.io/en/latest/doc/Chronos/Overview/chronos.html"
     click ReferPPML "https://bigdl.readthedocs.io/en/latest/doc/PPML/Overview/ppml.html"
@@ -72,7 +70,7 @@ flowchart TD;
     classDef ReferStyle1 fill:#f96;
     classDef ReferStyle2 fill:#FF1;
     classDef Feature fill:#FFF,stroke:#0f29ba,stroke-width:1px;
-    class ReferNano,ReferOrcaLearn,ReferOrcaData,ReferOrcaAutoml,ReferDLlib,ReferRayOnSpark,ReferChronos,ReferFriesian,ReferPPML ReferStyle1;
+    class ReferNano,ReferOrca,ReferDLlib,ReferDLlib2,ReferChronos,ReferFriesian,ReferPPML ReferStyle1;
     class ReferContact, ReferStyle2
     class Feature1,Feature2,Feature3,Feature4,Feature5,Feature6,Feature7 Feature;
     
