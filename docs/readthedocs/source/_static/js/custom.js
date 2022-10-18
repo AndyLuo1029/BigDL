@@ -20,9 +20,9 @@ $(document).ready(function(){
     )
 
     // set the content footer margin-bottom height 
-    var footer_height = $(".bd-footer").height()
+    var footer_height = $(".bd-footer").outerHeight()
     console.log(footer_height)
     $(".bd-footer-article").css({
-        "margin-bottom":"var(footer_height)"
+        "margin-bottom": footer_height
     });
 })
