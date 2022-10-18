@@ -18,4 +18,11 @@ $(document).ready(function(){
       ></div>\
       </div>"
     )
+
+    // set the content footer margin-bottom height 
+    var footer_height = $(".bd-footer").height()
+    console.log(footer_height)
+    $(".bd-footer-article").css({
+        "margin-bottom":"var(footer_height)"
+    });
 })

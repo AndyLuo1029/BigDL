@@ -56,7 +56,22 @@ html[data-theme="light"] {
     color: var(--pst-color-primary);
 }
 
-.bd-content {
-    flex-grow: 1;
-    max-width: 100%;
-  }
+/* make the sidebars sticky */
+
+/* make the page footer position absolute to aviod pushing sidebars up when scrolling to the end of the page */
+.bd-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--pst-color-on-background);
+}
+
+/* make its parent element position relative to ensure the "position:absolute" change valid */
+body{
+    position: relative;
+}
+
+/* the margin height is just the height of original footer, to avoid content overlapping */
+/* use JS to set it dynamically */
+/* .bd-footer-article {
+    margin-bottom: 70.5px;
+} */
