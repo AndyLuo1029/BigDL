@@ -21,12 +21,5 @@ $(document).ready(function(){
 
     // make left-sidebar padding
     var item1_num = $(".sidebar-start-items sidebar-primary__section").children().length;
-    console.log(item1_num)
-    // check if having 2 'sidebar-start-items__item' under 'sidebar-start-items sidebar-primary__section'
-    if(item1_num == 2){
-        var item2_num = $(".sidebar-start-items sidebar-primary__section > div:last-child").children().children();
-        console.log(item2_num)
-        //check if 
-        
-    }  
+    console.log(item1_num);
 })
