@@ -20,6 +20,10 @@ $(document).ready(function(){
     )
 
     // make left-sidebar padding
-    var item1_num = $(".sidebar-start-items sidebar-primary__section").children().length;
-    console.log(item1_num);
+    var item1_num = $(".bd-toc-item").children().length;
+    if(item1_num == 2){
+        $(".bd-toc-item").children("ul:last-child").css({
+            "padding-left":"1rem"
+        });
+    }
 })
